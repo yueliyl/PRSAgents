@@ -7,8 +7,8 @@ You do **not** need to derive EM or implement it from scratch. Use the supplied 
 `moeprs.py` contains the model (about 120 lines, NumPy only). `stage2_demo.py` shows loading, fitting, validation, and test-prediction export. Run from this package:
 
 ```bash
-python stage2_demo.py data/datasets/dataset_01/rep00
-python stage2_baselines.py data/datasets/dataset_01/rep00 --out outputs/stage2_demo
+python stage2_demo.py data/shared_effects
+python stage2_baselines.py data/shared_effects --out outputs/stage2_demo
 ```
 
 To use your Stage 1 export, add `--scores outputs/stage1_demo/target_scores.csv` to either command. The following is the complete model API once training/validation arrays have been loaded:

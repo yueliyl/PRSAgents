@@ -34,8 +34,8 @@ def load_experts(d, scores=None):
     return d
 
 
-def run(data, out, scores=None, train_size=None):
-    d = load_experts(Dataset(str(data)), scores)
+def run(data, out, scores=None, train_size=None, replicate=0):
+    d = load_experts(Dataset(str(data), replicate), scores)
     out = Path(out); out.mkdir(parents=True, exist_ok=True)
     S, _, C, y, _ = d.part('train')
     if train_size:
@@ -99,9 +99,10 @@ def run(data, out, scores=None, train_size=None):
 
 if __name__=='__main__':
     ap=argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('data',nargs='?',default='data/datasets/dataset_01/rep00')
+    ap.add_argument('data',nargs='?',default='data/shared_effects')
+    ap.add_argument('--replicate', type=int, default=0)
     ap.add_argument('--out',default='outputs/stage2_demo')
     ap.add_argument('--scores',help='Optional Stage 1 target_scores.csv')
     ap.add_argument('--train-size',type=int)
     args=ap.parse_args()
-    run(args.data,args.out,args.scores,args.train_size)
+    run(args.data,args.out,args.scores,args.train_size,args.replicate)

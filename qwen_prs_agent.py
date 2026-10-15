@@ -14,7 +14,8 @@ import numpy as np
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--project", type=Path, default=Path.cwd())
-    parser.add_argument("--data", default="data/datasets/dataset_01/rep00")
+    parser.add_argument("--data", default="data/shared_effects")
+    parser.add_argument("--replicate", type=int, default=0)
     parser.add_argument("--model", default="qwen3:8b")
     parser.add_argument("--scores", help="Optional Stage 1 target_scores.csv")
     parser.add_argument("--budget", type=int, default=6)
@@ -31,7 +32,7 @@ def main():
     data_path = Path(args.data)
     if not data_path.is_absolute():
         data_path = args.project / data_path
-    d = Dataset(str(data_path))
+    d = Dataset(str(data_path), args.replicate)
     from stage2_baselines import load_experts
     d = load_experts(d, args.scores)
     harness = Harness(d, budget=args.budget)

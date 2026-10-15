@@ -11,11 +11,12 @@ from models import incremental_r2
 
 def main():
     ap = argparse.ArgumentParser(description=__doc__)
-    ap.add_argument('data', nargs='?', default='data/datasets/dataset_01/rep00')
+    ap.add_argument('data', nargs='?', default='data/shared_effects')
+    ap.add_argument('--replicate', type=int, default=0)
     ap.add_argument('--scores', help='Optional Stage 1 target_scores.csv')
     ap.add_argument('--out', default='outputs/stage2_minimal')
     args = ap.parse_args()
-    d = load_experts(Dataset(args.data), args.scores)
+    d = load_experts(Dataset(args.data, args.replicate), args.scores)
     S, _, C, y, _ = d.part('train')
     model = MoEPRS(n_pc=10, l2_gate=0.01).fit(S, C, y)
     Sv, _, Cv, yv, _ = d.part('val')
