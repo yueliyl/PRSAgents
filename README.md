@@ -6,7 +6,7 @@ Read **COMP565_PRSAgents_project_description.pdf** first. The editable Word vers
 
 | File or folder | Purpose |
 | --- | --- |
-| Project description `.pdf` and `.docx` | Three stages, constraints, evaluation and deliverables |
+| Project description `.pdf` | Three stages, constraints, evaluation and deliverables |
 | `data/datasets/dataset_01` to `dataset_04` | Four anonymous generating settings, ten replicates each |
 | `data/stage1/` | Shared ancestry LD and six transfer-cohort genotype files |
 | `dataset_catalog.csv` | Paths and split sizes for all forty replicates; no answer key |
