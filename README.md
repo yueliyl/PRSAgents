@@ -1,5 +1,11 @@
 # COMP 565 Fall 2026 Course Project PRSAgents
 
+## Download the complete student package
+
+[Download PRSAgents_Student_Package.zip (137 MB)](https://github.com/yueliyl/PRSAgents/releases/download/fall2026-v1/PRSAgents_Student_Package.zip) from the [Fall 2026 release](https://github.com/yueliyl/PRSAgents/releases/tag/fall2026-v1).
+
+Unzip it, open the extracted `Student_Package` folder, and run the commands below from that folder. The ZIP includes all 40 datasets, shared Stage 1 data, scripts, requirements, and the project description. The repository and GitHub’s automatic source-code ZIP do not include the datasets.
+
 Read **COMP565_PRSAgents_project_description.pdf** first. The editable Word version is included too. This folder is self-contained: run commands here, without referring to the instructor's repository. All three stages are required in the complete project description.
 
 ## What is here
