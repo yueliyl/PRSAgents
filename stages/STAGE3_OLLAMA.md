@@ -49,7 +49,7 @@ The release includes `qwen_prs_agent.py`. It selects the five supplied VIPRS col
 Run this demonstration from the project directory:
 
 ```bash
-python qwen_prs_agent.py --project . --data data/datasets/dataset_01/rep00 --model qwen3:8b --budget 6 --out outputs/qwen_demo
+python qwen_prs_agent.py --project . --data data/shared_effects --model qwen3:8b --budget 6 --out outputs/qwen_demo
 ```
 
 If the released datasets have anonymous names, replace the example data path with an assigned dataset path. Do not pass a regime name to the LLM. Inspect `outputs/qwen_demo/trace.json` and `predictions.csv`. Find an actual tool call, its hypothesis, the returned result, and the agent's final selection. A final answer without tool calls does not demonstrate an agent loop.
