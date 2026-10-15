@@ -124,7 +124,7 @@ size, so compare methods paired within replicate and average over the ten.
 
 Each replicate has 4,000 individuals and 1,000 typed variants, split into 2,000 train, 800 validation, and 1,200 test. Target covariates are age, sex, PC1 to PC10. The supplied panel has ten score columns: VIPRS and LASSO for five discovery sources. The core project uses the five VIPRS experts consistently.
 
-`labels.npz` holds the phenotypes and a `split` array (0 train, 1 validation, 2 test); test phenotypes are NaN. Test IDs are available solely for prediction submission. Test labels, local ancestry truth, causal effects, founder pools, oracle numbers, regime keys, and prior solution results are not in this package. Separate Stage 1 transfer-cohort phenotypes are intentionally included for portability analysis.
+`labels.npz` holds the phenotypes and a `split` array (0 train, 1 validation, 2 test); test phenotypes are NaN. The 1,200 test individuals keep their genotypes, source scores and covariates, so you can predict for them; only their phenotypes are withheld. `Harness.submit` writes the required `iid,prediction` CSV for exactly those individuals. Test labels, local ancestry truth, causal effects, founder pools, oracle numbers, and prior solution results are not in this package. Separate Stage 1 transfer-cohort phenotypes are intentionally included for portability analysis.
 
 Folder names state the generating scenario, and `data/README.md` describes each one. Use development replicates to debug, then freeze the prompt/tools/policy before assessing different assigned replicates. Keep development and assessment results separate and use the instructor's designated allocation when supplied.
 

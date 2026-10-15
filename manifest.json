@@ -9,18 +9,18 @@
   },
   {
    "path": "COMP565_PRSAgents_project_description.docx",
-   "bytes": 23823,
-   "sha256": "6d6dfc0eab45053f09bef7582c67464d3bcff5bb06f630883d64c28fd141d23a"
+   "bytes": 23362,
+   "sha256": "2e77d702def883abd5357220cef63c7c4c9c9461bc53f14e4595131db6c8b3d7"
   },
   {
    "path": "COMP565_PRSAgents_project_description.pdf",
-   "bytes": 208588,
-   "sha256": "3f37940c384b4e8d8d5a72b935ad9f4e8840343ae24a5942d65d5f0fe94e0af7"
+   "bytes": 143272,
+   "sha256": "1c22a61c076235a5c8eb21ac27df3f53bae81d2f7f15c55ebc0b1b03b6a65506"
   },
   {
    "path": "README.md",
-   "bytes": 11168,
-   "sha256": "59f6984f8b6865c78b73e06299c15aaa72fc4645b93545c941dfa2ec9bae6047"
+   "bytes": 11331,
+   "sha256": "85487e96e7f875ca63ec5bc016e61f0b8e462a4a9415255a5de2f20f78d9ebe5"
   },
   {
    "path": "STAGE2_GUIDE.md",
@@ -354,8 +354,8 @@
   },
   {
    "path": "stages/STAGE3_OLLAMA.md",
-   "bytes": 11954,
-   "sha256": "cce7e58b691fdc256f416c577d0041a2cf9e15799787175b7e87fe66c9346766"
+   "bytes": 11862,
+   "sha256": "5d138a09fe6a7c2af81ae96b5a3f69a09f5bf14b59927776b5afc88c04760e9e"
   },
   {
    "path": "stages/__init__.py",
