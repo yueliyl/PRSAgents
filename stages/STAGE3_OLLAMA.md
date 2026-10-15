@@ -52,7 +52,7 @@ Run this demonstration from the project directory:
 python qwen_prs_agent.py --project . --data data/shared_effects --model qwen3:8b --budget 6 --out outputs/qwen_demo
 ```
 
-If the released datasets have anonymous names, replace the example data path with an assigned dataset path. Do not pass a regime name to the LLM. Inspect `outputs/qwen_demo/trace.json` and `predictions.csv`. Find an actual tool call, its hypothesis, the returned result, and the agent's final selection. A final answer without tool calls does not demonstrate an agent loop.
+Replace the example data path with your assigned scenario and replicate. Inspect `outputs/qwen_demo/trace.json` and `predictions.csv`. Find an actual tool call, its hypothesis, the returned result, and the agent's final selection. A final answer without tool calls does not demonstrate an agent loop.
 
 This demonstration uses one validation split. Its six-evaluation budget includes the baseline. It is a setup exercise, not the completed Stage 3 submission or evidence of a performance improvement.
 
@@ -102,7 +102,7 @@ A calibration curve or spline must be fitted without using the labels of the ind
 
 Compare three methods: Stage 2, your Ollama/Qwen agent, and a fixed or random search controller over the same permitted candidate space. Give the two search controllers the same twelve-candidate allowance, folds, confirmation rule, and data access. Include Stage 2 in each search. Fix random seeds and the candidate space before final assessment.
 
-Use designated development datasets or replicates to write prompts and debug tools. Freeze the prompt, tools, candidate space, budget, and selection rule before running the assigned assessment replicates. Do not tune the policy using their test results or the hidden regime. Keep instructor test labels and oracle metadata out of the agent's context.
+Use designated development datasets or replicates to write prompts and debug tools. Freeze the prompt, tools, candidate space, budget, and selection rule before running the assigned assessment replicates. Do not tune the policy using their test results. Keep instructor test labels and oracle metadata out of the agent's context.
 
 Submit test predictions for all three methods. Test labels are used only by the instructor for final assessment; test feedback must not become an input to the refinement loop. Report validation gains honestly and distinguish them from test gains supplied by the instructor. Do not treat the per-dataset best candidate chosen on test as an unbiased estimate of attainable improvement.
 
@@ -114,7 +114,7 @@ Submit:
 2. Complete LLM messages and tool-call traces for each assigned run, including hypotheses, results, errors, revisions, final selection, and any fallback.
 3. A candidate table with out-of-fold scores, paired gains and uncertainty, confirmation results, evaluation counts, fit counts, and wall-clock runtime.
 4. Test predictions for Stage 2, the AI agent, and the comparison controller on every assigned dataset and replicate.
-5. A report explaining what the AI decisions added, which part of the MoE appeared misspecified, and whether improvements were consistent. Use all assigned replicates; when ten per regime are provided, report paired contrasts over those ten rather than one favorable run.
+5. A report explaining what the AI decisions added, which part of the MoE appeared misspecified, and whether improvements were consistent. Use all assigned replicates; when ten per scenario are provided, report paired contrasts over those ten rather than one favorable run.
 
 Credit depends on actual LLM-driven experimentation, correct MoE constraints, fair comparisons, and honest interpretation. A well-supported negative result or justified retention of Stage 2 receives full credit for the investigation. Model size and a positive performance gain are not grading requirements. A rule-based search alone, a fixed sweep with AI-written commentary, or a trace reconstructed after the experiment does not satisfy the AI-agent requirement.
 
